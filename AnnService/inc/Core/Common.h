@@ -16,6 +16,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #define FolderSep '/'
+#define ACCESSPERMS (S_IRWXU|S_IRWXG|S_IRWXO)
 #define mkdir(a) mkdir(a, ACCESSPERMS)
 inline bool direxists(const char* path) {
     struct stat info;
